@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: POST-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog_microservice?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://User:e8cbe34f-1e0c-48e1-be15-b2c8bbc779a7@localhost:8761/eureka
+
+
